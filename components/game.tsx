@@ -40,24 +40,24 @@ function Game(){
 
 
 
-    // function handleClick(i:any){
-    //     const history= historynet.slice(0, stepNumber+1);
-    //     const current= history[stepNumber];
-    //     const squares = [...current];
-    //     squares[i]=xIsNext?"X":"O";
-        
-    //     if (calculateWinner(squares) || squares[i]) {
-    //         return;
-    //       }  
-
-    //       setHistory(history.concat(squares));
-    //       setStepNumber(history.length);
-    //       setXIsNext(!xIsNext);
-    // }
-
     function handleClick(i:any){
-      console.log("CLicked")
+        const history= historynet.slice(0, stepNumber+1);
+        const current= history[stepNumber];
+        const squares = [...current];
+        squares[i]=xIsNext?"X":"O";
+        
+        if (calculateWinner(squares) || squares[i]) {
+            return;
+          }  
+
+          setHistory(history.concat(squares));
+          setStepNumber(history.length);
+          setXIsNext(!xIsNext);
     }
+
+    // function handleClick(i:any){
+    //   console.log("CLicked")
+    // }
 
     function jumpTo(step: any){
         setStepNumber(step);
