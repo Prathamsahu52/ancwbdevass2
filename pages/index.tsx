@@ -13,7 +13,7 @@ import {
 
 function Home() {
   
-  return(<RecoilRoot><Game /></RecoilRoot>) ;
+  return(<Game />) ;
 }
 
 export default Home
